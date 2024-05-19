@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando DOM</title>
+    <style>
+        body {
+            background-color: rgb(93, 93, 216);
+            font: normal 18pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TERMINAL DO JOA</h1>
+    <p id="par">aaaaaaaaaaaaaaa</p> <!-- VARIÁVEL P (parágrafo) -->
+    <p id="substituto">bbbbbbbbbbbb</p>
+    <!-- VARIÁVEL S (substituto do parágrafo), o que vamos fazer aqui é substituir o parágrafo de id "par" pelo de id "substituto" -->
+    <script>
+        let p = document.getElementById('par')
+        let s = document.getElementById('substituto')
+        p.parentNode.replaceChild(s, p) // Aqui estou substituindo o nó de "p" por "s". parentNode está chamando o parente de p (body) para indicar que p é Child, logo depois vem o comando replaceChild para substituir os nós, ou seja, o conteúdo dos ID's.
+        window.alert(`o valor de s continua ${s.textContent}`)
+        window.alert('Mas o conteúdo do primeiro parágrafo foi substituido pelo conteúdo do segundo')
+    </script>
+</body>
+
+</html>

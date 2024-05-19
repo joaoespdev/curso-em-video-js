@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(121, 121, 185);
+            color: white;
+            /* Comentário em CSS */
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgb(246, 246, 89);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá, mundo!</h1> <!--Isso é um comentário-->
+    <p>Parágrafo lorem ipsum dolor sit</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        //window.alert('A soma dos valores é ' + String(s)) // Concatenação
+        // number + number para adição
+        // string + string para concatenação (window.prompt recebe valor string por padrão)
+        /* Usei "Number()" para converter a string para número, para que o compilador entenda que quero a soma de dois números.
+        assim como também posso usar "String()" para converter um número por padrão em uma string, como fiz no
+        window.alert (sem necessidade, apenas para exemplificação) */
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // Template String
+    </script>
+</body>
+
+</html>

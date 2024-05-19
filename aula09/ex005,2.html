@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1] // Utilizamos "[1] para pegar o segundo parágrafo, se quiséssemos o primeiro, seria [0]. 
+        window.document.write('Está escrito assim: ' + p1.innerHTML) // Utilizamos innerHTML e não innerText pelo simples fato de que o innerText não pegaria o negrito.
+        p1.style.color = 'blue'
+        //window.alert(p1.innerText) // Aqui, se utilizássemos o innerHTML a formatação não seria incorporada, aparecendo <strong></strong> na tela. 
+        /* var d = window.document.getElementById('msg')
+        d.style.background = 'skyblue'
+        d.innerText = 'Estou aguardando...' // Mudaria a mensagem da div. */
+        var s = window.document.querySelector('div#msg')
+        s.style.color = 'blue'
+        // Lembrando que querySelector é uma forma nova de buscar um elemento, não funciona em navegadores mais antigos.
+    </script>
+</body>
+
+</html>

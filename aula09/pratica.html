@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando DOM</title>
+    <style>
+        body {
+            background-color: rgb(93, 93, 216);
+            font: normal 18pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TERMINAL DO JOA</h1>
+    <p id="par">aaaaaaaaaaaaaaa</p>
+    <script>
+        var p = window.document.getElementById('par') // selecionando o parágrafo pelo id
+        document.body.removeChild(p) // usando removeChild para remover o nó filho recebido pela variável p, obs, tenho que acertar seu parente (no caso, o parente de p, que é body), se fosse apenas document.removeChild(p) daria erro.
+        window.alert(`A variável p é igual a ${p.textContent}`) // aqui estou imprimindo a variável num alerta, note que seu valor em memória ainda existe, mas não é mais parte do DOM, seu conteúdo foi totalmente removido. Mas ainda é possível reutilizar o nó removido mais tarde no seu código. Se o valor de retorno de removeChild() não for armazenado e nenhuma outra referência for mantida, ele será automaticamente excluído da memória após um curto período de tempo.
+    </script>
+</body>
+
+</html>

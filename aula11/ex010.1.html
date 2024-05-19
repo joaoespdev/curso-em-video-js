@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Insira o sua nacionalidade:</h1>
+    <input type="text" name="nacio" id="nacio">
+    <input type="submit" id="submit" value="Confirmar" onclick="confirmar()">
+    <!--<input type="submit" value="Confirma" onclick="confirmar()">!-->
+    <div id="resNac">
+
+    </div>
+    <script>
+        document.addEventListener("keypress", function (confirmar) { // Evento que acessa o documento do site, adiciona o evento keypress para acionar a função confirmar pelo "enter".
+            if (confirmar.key === 'Enter') {
+                var btn = document.querySelector("#submit");
+                btn.click();
+            }
+        })
+        function confirmar() {
+            //var nac = window.document.getElementById("nacio") O valor de nac está recebendo o elemento HTML, e não o valor digitado no campo de entrada. Para obter o mesmo, preciso utilizar ".value" Dessa forma:
+            var nac = String(nacio.value)
+            var resdiv = window.document.getElementById("resNac")
+            if (nac.toLowerCase().replace("z",'s')=='brasileiro') { // OU: if (nac == 'Brasileiro' || nac == 'brasileiro' || nac == 'Brazileiro' || nac == 'brazileiro') {
+                resdiv.innerHTML = '<p>Então você é Brasileiro.</p>'
+            } else {
+                resdiv.innerHTML = '<p>Então você é Gringo.</p>'
+            }
+        }
+    </script>
+</body>
+
+</html>

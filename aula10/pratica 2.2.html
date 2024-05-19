@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrescando a memória</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+
+        p#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multiplicando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <p id="res">Resultado</p> <!--Aqui o parágrafo de id "res" imprime resultado, agora leia a linha de código 27-->
+    <script>
+        function multiplicar() {
+            var tn1 = window.document.querySelector('input#txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value) // Em JavaScript, quando você está lidando com elementos HTML, muitas vezes você precisa acessar ou modificar os valores desses elementos. O .value é uma propriedade comum usada para obter o valor de elementos de formulário, como campos de entrada (<input>), seletores (<select>), ou áreas de texto (<textarea>).
+            var n2 = Number(tn2.value)
+            var multi = n1 * n2
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a ${multi}` // Aqui, utilizamos a função para imprimir uma mensagem diferente ao invés de "Resultado", quando clicamos em multiplicar, já que é o clique no botão de multiplicar que aciona a nossa função onclick chamada "multiplicar".
+        }
+    </script>
+</body>
+
+</html>

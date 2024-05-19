@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: rgb(13, 13, 53);
+        }
+
+        div#area {
+            /* # para indicar uma id em css */
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" onmousedown="segurar()">
+        Interaja...
+    </div>
+
+    <script>
+        function clicar() {
+            var a = window.document.getElementById('area')
+
+            /* 
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+            
+            Eu poderia adicionar os eventos apenas dentro dos scripts do JS, como adicionei nas notas acima.
+
+            */
+
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+        function segurar() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Vai segurando!'
+            a.style.background = 'purple'
+        }
+    </script>
+</body>
+
+</html>

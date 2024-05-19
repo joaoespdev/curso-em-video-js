@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(106, 166, 214);
+    font: normal 15pt Arial;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    width: 380px;
+    padding: 100px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.247);
+}
+
+p#curso {
+    font: normal 15pt Arial;
+    text-align: center;
+    color: white;
+}

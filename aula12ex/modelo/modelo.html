@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilo.css"> <!--link:css-->
+</head>
+
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento:
+                <input type="number" name="anonasc" id="anoNasc">
+            </p>
+            <p>Sexo:
+                <!-- Label nesse caso vai deixar os inputs junto das strings "Masculino" e "Feminino" juntos, vai envelopar as strings, deixa mais dinâmico na hora de clicar
+                você pode clicar fora da bolinha, mas nas opções em si, que também vai computar a seleção entre os dois gêneros. Naturalmente label serve para envelopar e ajudar o buscador a assimilar o parágrafo junto da input do formulário. -->
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input id="verificar" type="button" value="Verificar" onclick="confirmar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script> <!--script:src-->
+</body>
+
+</html>
